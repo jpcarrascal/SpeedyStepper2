@@ -697,7 +697,7 @@ bool SpeedyStepper::moveToHomeInSteps(long directionTowardHome,
   //
   // if the home switch is not already set, move toward it
   //
-  if (digitalRead(homeLimitSwitchPin) == HIGH)
+  if (digitalRead(homeLimitSwitchPin) == LOW)
   {
     //
     // move toward the home switch
@@ -707,7 +707,7 @@ bool SpeedyStepper::moveToHomeInSteps(long directionTowardHome,
     limitSwitchFlag = false;
     while(!processMovement())
     {
-      if (digitalRead(homeLimitSwitchPin) == LOW)
+      if (digitalRead(homeLimitSwitchPin) == HIGH)
       {
         limitSwitchFlag = true;
         break;
@@ -730,7 +730,7 @@ bool SpeedyStepper::moveToHomeInSteps(long directionTowardHome,
   limitSwitchFlag = false;
   while(!processMovement())
   {
-    if (digitalRead(homeLimitSwitchPin) == HIGH)
+    if (digitalRead(homeLimitSwitchPin) == LOW)
     {
       limitSwitchFlag = true;
       break;
@@ -753,7 +753,7 @@ bool SpeedyStepper::moveToHomeInSteps(long directionTowardHome,
   limitSwitchFlag = false;
   while(!processMovement())
   {
-    if (digitalRead(homeLimitSwitchPin) == LOW)
+    if (digitalRead(homeLimitSwitchPin) == HIGH)
     {
       limitSwitchFlag = true;
       break;
