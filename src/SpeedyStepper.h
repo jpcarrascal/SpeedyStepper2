@@ -1,7 +1,7 @@
 
 //      ******************************************************************
 //      *                                                                *
-//      *                Header file for SpeedyStepper.c                 *
+//      *                Header file for SpeedyStepper2.c                 *
 //      *                                                                *
 //      *               Copyright (c) S. Reifel & Co, 2014               *
 //      *                                                                *
@@ -31,23 +31,23 @@
 // SOFTWARE.
 
 
-#ifndef SpeedyStepper_h
-#define SpeedyStepper_h
+#ifndef SpeedyStepper2_h
+#define SpeedyStepper2_h
 
 #include <Arduino.h>
 #include <stdlib.h>
 
 
 //
-// the SpeedyStepper class
+// the SpeedyStepper2 class
 //
-class SpeedyStepper
+class SpeedyStepper2
 {
   public:
     //
     // public functions
     //
-    SpeedyStepper();
+    SpeedyStepper2();
     void connectToPins(byte stepPinNumber, byte directionPinNumber);
     
     void setStepsPerMillimeter(float motorStepPerMillimeter);
@@ -117,4 +117,3 @@ class SpeedyStepper
 
 // ------------------------------------ End ---------------------------------
 #endif
-
